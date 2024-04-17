@@ -1,0 +1,6 @@
+@CLcommandAPI_HostAddress = http://localhost:5216
+
+GET {{CLcommandAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
