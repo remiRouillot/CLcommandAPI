@@ -14,14 +14,14 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
-
+string? cstr = Console.ReadLine();
+Environment.SetEnvironmentVariable("CSTR", cstr ?? "user=RROUILLOT;server=pub400.com;password=@merial&Granit48;license library=RROUILLOT2");
 builder.Services.Configure<KestrelServerOptions>(options => {
     options.ConfigureHttpsDefaults(options =>
         options.ClientCertificateMode = ClientCertificateMode.NoCertificate);
 });
 
-// Add services to the container.
-
+// Add services to the container:
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
